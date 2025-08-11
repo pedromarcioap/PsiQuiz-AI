@@ -1,2 +1,14 @@
-# PsiQuiz-AI
-O PsicoQuiz IA permite gerar quizzes de psicologia, e você pode configurar os parâmetros para criar um quiz, idealmente com distratores de alta qualidade e geração rápida com IA avançada.
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

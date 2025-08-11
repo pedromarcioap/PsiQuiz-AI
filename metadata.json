@@ -1,0 +1,6 @@
+{
+  "name": "PsicoQuiz IA",
+  "description": "Um WebApp que usa IA para criar quizzes de psicologia personalizados, analisar seu desempenho e guiar seus estudos.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
