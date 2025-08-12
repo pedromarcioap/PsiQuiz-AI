@@ -53,8 +53,8 @@ export default async function handler(
     const filePath = `${userId}/${Date.now()}-${fileName}`;
     const { data, error } = await supabase.storage
       .from('library-files') // Nome do nosso bucket
-      .createSignedUploadUrl(filePath, 60, { // URL válida por 60 segundos
-          upsert: true, // Permite sobrescrever se o caminho for o mesmo
+      .createSignedUploadUrl(filePath, {
+        expiresIn: 60, // URL válida por 60 segundos
       });
 
     if (error) {

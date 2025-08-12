@@ -15,11 +15,21 @@ datasource db {
 }
 
 model Quiz {
-  id        String   @id @default(cuid())
+  id        String     @id @default(cuid())
   title     String
-  createdAt DateTime @default(now())
-  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime   @default(now())
+  author    User       @relation(fields: [authorId], references: [id])
   authorId  String
+  questions Question[]
+}
+
+model Question {
+  id            String   @id @default(cuid())
+  text          String
+  options       String[] // Array de strings para as opções
+  correctAnswer String
+  quiz          Quiz     @relation(fields: [quizId], references: [id])
+  quizId        String
 }
 
 model User {
