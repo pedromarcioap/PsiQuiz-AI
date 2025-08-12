@@ -29,4 +29,15 @@ model User {
   password  String
   createdAt DateTime @default(now())
   quizzes   Quiz[]
+  libraryFiles LibraryFile[]
+}
+
+model LibraryFile {
+  id          String   @id @default(cuid())
+  name        String
+  storagePath String
+  fileType    String
+  createdAt   DateTime @default(now())
+  owner       User     @relation(fields: [ownerId], references: [id])
+  ownerId     String
 }
