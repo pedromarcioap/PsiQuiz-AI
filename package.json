@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vercel dev",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "@google/genai": "^1.12.0",
+    "@prisma/client": "^6.13.0",
     "@types/pdfjs-dist": "^2.10.378",
     "mammoth": "^1.10.0",
     "pdfjs-dist": "^5.4.54",
@@ -26,11 +28,14 @@
     "@types/node": "^22.14.0",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
+    "@vercel/node": "^5.3.11",
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
+    "prisma": "^6.13.0",
     "tailwindcss": "^3.4.0",
     "typescript": "~5.8.2",
+    "vercel": "^44.7.3",
     "vite": "^6.2.0"
   }
 }
